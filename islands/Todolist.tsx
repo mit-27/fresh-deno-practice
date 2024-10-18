@@ -1,6 +1,7 @@
 import { useContext } from "preact/hooks";
 import { useSignal } from "@preact/signals";
 import { AppState } from "../routes/_app.tsx";
+import { Button } from "../components/Button.tsx";
 
 interface Todo {
     text: string;
@@ -21,6 +22,12 @@ const TodoList = () => {
         currentTodo.value = "";
     };
 
+    const onComplete = (todo: Todo) => {
+        todos.value = todos.value.map((t) =>
+            t === todo ? { ...t, isCompleted: !t.isCompleted } : t
+        );
+    };
+
     const removeTodo = (todo: Todo) => {
         todos.value = todos.value.filter((t) => t !== todo);
     };
@@ -34,7 +41,8 @@ const TodoList = () => {
                     onInput={(e) => currentTodo.value = e.currentTarget.value}
                 />
 
-                <button onClick={() => addTodo()}>Add</button>
+                <Button onClick={() => addTodo()}>Add</Button>
+                <p>Completed Tasks : {completed}</p>
             </div>
 
             <ul>
@@ -43,9 +51,10 @@ const TodoList = () => {
                         <input
                             type="checkbox"
                             checked={todo.isCompleted}
-                            onChange={() => removeTodo(todo)}
+                            onChange={() => onComplete(todo)}
                         />
                         <label>{todo.text}</label>
+                        <Button onClick={() => removeTodo(todo)}>Remove</Button>
                     </li>
                 ))}
             </ul>

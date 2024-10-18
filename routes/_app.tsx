@@ -6,6 +6,8 @@ const createAppState = () => {
   const todos = signal<{ text: string; isCompleted: boolean }[]>([]);
 
   const completed = computed(() => {
+    console.log("Completed Called");
+    console.log(todos.value.filter((todo) => todo.isCompleted).length);
     return todos.value.filter((todo) => todo.isCompleted).length;
   });
 
