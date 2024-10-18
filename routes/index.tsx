@@ -2,7 +2,7 @@ import TodoList from "../islands/Todolist.tsx";
 
 export default function Home() {
   return (
-    <div class="flex flex-col items-center justify-center gap-5 bg-[#86efac] min-h-screen">
+    <div class="flex flex-col items-center justify-center gap-5 min-h-screen">
       <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
         <img
           class="my-6"

@@ -33,28 +33,41 @@ const TodoList = () => {
     };
 
     return (
-        <div>
-            <div className="flex gap-2">
+        <div className="flex flex-col gap-2">
+            <div className="flex gap-2 items-center justify-center">
                 <input
                     type="text"
                     value={currentTodo}
+                    className="input input-bordered"
                     onInput={(e) => currentTodo.value = e.currentTarget.value}
                 />
 
-                <Button onClick={() => addTodo()}>Add</Button>
+                <button
+                    onClick={() => addTodo()}
+                    className="btn btn-primary btn-outline"
+                >
+                    Add
+                </button>
                 <p>Completed Tasks : {completed}</p>
             </div>
 
-            <ul>
+            <ul className="flex flex-col gap-2">
                 {todos.value.map((todo) => (
-                    <li className="flex gap-2">
+                    <li className="flex gap-2 items-center ">
                         <input
                             type="checkbox"
+                            className="checkbox"
                             checked={todo.isCompleted}
                             onChange={() => onComplete(todo)}
                         />
                         <label>{todo.text}</label>
-                        <Button onClick={() => removeTodo(todo)}>Remove</Button>
+                        {/* <Button onClick={() => removeTodo(todo)}>Remove</Button> */}
+                        <button
+                            onClick={() => removeTodo(todo)}
+                            className="btn btn-error btn-outline hover:text-white"
+                        >
+                            Remove
+                        </button>
                     </li>
                 ))}
             </ul>
