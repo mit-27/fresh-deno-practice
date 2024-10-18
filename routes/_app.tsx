@@ -6,8 +6,6 @@ const createAppState = () => {
   const todos = signal<{ text: string; isCompleted: boolean }[]>([]);
 
   const completed = computed(() => {
-    console.log("Completed Called");
-    console.log(todos.value.filter((todo) => todo.isCompleted).length);
     return todos.value.filter((todo) => todo.isCompleted).length;
   });
 
@@ -18,7 +16,7 @@ export const AppState = createContext(createAppState());
 
 export default function App({ Component }: PageProps) {
   return (
-    <html>
+    <html data-theme="light">
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +25,7 @@ export default function App({ Component }: PageProps) {
       </head>
       <body>
         <AppState.Provider value={createAppState()}>
+          <h2>Hello From Wrapper</h2>
           <Component />
         </AppState.Provider>
       </body>
