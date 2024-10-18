@@ -5,15 +5,10 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_middleware from "./routes/_middleware.ts";
-import * as $about from "./routes/about.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
-import * as $dashboard_layout from "./routes/dashboard/_layout.tsx";
-import * as $dashboard_index from "./routes/dashboard/index.tsx";
-import * as $dashboard_special from "./routes/dashboard/special.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
-import * as $motion from "./routes/motion.tsx";
-import * as $Todolist from "./islands/Todolist.tsx";
+import * as $Icons from "./islands/Icons.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -21,17 +16,12 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/_middleware.ts": $_middleware,
-    "./routes/about.tsx": $about,
     "./routes/api/joke.ts": $api_joke,
-    "./routes/dashboard/_layout.tsx": $dashboard_layout,
-    "./routes/dashboard/index.tsx": $dashboard_index,
-    "./routes/dashboard/special.tsx": $dashboard_special,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
-    "./routes/motion.tsx": $motion,
   },
   islands: {
-    "./islands/Todolist.tsx": $Todolist,
+    "./islands/Icons.tsx": $Icons,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

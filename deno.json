@@ -22,15 +22,21 @@
   ],
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
-    "preact": "https://esm.sh/preact@10.22.0",
-    "preact/": "https://esm.sh/preact@10.22.0/",
-    "daisyui": "npm:daisyui@latest",
+    "$std/": "https://deno.land/std@0.216.0/",
+    "@preact-icons/rx": "jsr:@preact-icons/rx@^1.0.12",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
+    "class-variance-authority": "npm:class-variance-authority@^0.7.0",
+    "clsx": "npm:clsx@^2.1.1",
+    "daisyui": "npm:daisyui@latest",
+    "preact": "npm:preact@10.22.1",
+    "preact/hooks": "npm:preact@10.22.1/hooks",
+    "preact/jsx-runtime": "npm:preact@10.22.1/jsx-runtime",
+    "tailwind-merge": "npm:tailwind-merge@^2.5.4",
     "tailwindcss": "npm:tailwindcss@3.4.1",
+    "tailwindcss-animate": "npm:tailwindcss-animate@^1.0.7",
     "tailwindcss/": "npm:/tailwindcss@3.4.1/",
-    "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
-    "$std/": "https://deno.land/std@0.216.0/"
+    "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

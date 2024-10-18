@@ -24,10 +24,9 @@ export default function App({ Component }: PageProps) {
         <link rel="stylesheet" href="/styles.css" />
       </head>
       <body>
-        <AppState.Provider value={createAppState()}>
-          <h2>Hello From Wrapper</h2>
-          <Component />
-        </AppState.Provider>
+        {/* <AppState.Provider value={createAppState()}> */}
+        <Component />
+        {/* </AppState.Provider> */}
       </body>
     </html>
   );
