@@ -26,6 +26,8 @@
     "@preact-icons/rx": "jsr:@preact-icons/rx@^1.0.12",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
+    "@radix-ui/react-slot": "npm:@radix-ui/react-slot@^1.1.0",
+    "@tailwindcss/typography": "npm:@tailwindcss/typography@^0.5.15",
     "class-variance-authority": "npm:class-variance-authority@^0.7.0",
     "clsx": "npm:clsx@^2.1.1",
     "daisyui": "npm:daisyui@latest",

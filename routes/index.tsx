@@ -1,4 +1,6 @@
-import { RxAccessibility } from "@preact-icons/rx";
+import { cn } from "../lib/utils.ts";
+import { Button } from "../components/shadcn-button.tsx";
+import Trails from "../islands/Trails.tsx";
 
 export default function Home() {
   return (
@@ -14,6 +16,7 @@ export default function Home() {
       </div>
       <h1 class="text-4xl font-bold">Welcome to Fresh</h1>
       <h1 class="text-xl font-bold">Todo List Demo (with Global State)</h1>
+      <Trails />
     </div>
   );
 }
